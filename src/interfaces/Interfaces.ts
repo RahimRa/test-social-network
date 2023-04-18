@@ -1,4 +1,3 @@
-
 export interface PostsData {
   id: number
   messege: string
@@ -7,6 +6,12 @@ export interface PostsData {
 
 export interface State {
   users: PostsData[]
+}
+
+export interface NewsFeedData {
+  id?:string
+  title: string
+  isActive: boolean
 }
 
 export interface NavbarLink {
