@@ -8,20 +8,24 @@ export const Wrapper = styled.div`
   width: 100%;
 `
 
-export const Avatar = styled.img`
+export const Info_Wrap = styled.div`
   position: absolute;
   left: 100px;
   top: 170px;
-  width: 150px;
-  height: 150px;
-  border-radius: 10px;
-  background-color: white;
-  padding: 2px;
-  object-fit: cover;
-  border-radius: 10px;
 `
 export const Img = styled.img`
   height: ${({ height }) => height};
   width: ${({ width }) => width};
   object-fit: cover;
+`
+export const Main = styled.div`
+  display: flex;
+  justify-content: center;
+`
+export const Child1 = styled.div`
+  flex-basis: 20%;
+`
+
+export const Child2 = styled.div`
+  flex-basis: 80%;
 `

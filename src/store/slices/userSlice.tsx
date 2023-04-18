@@ -9,7 +9,7 @@ const initialState: PostsData[] = [
   },
   {
     id: 1,
-    messege: "It's my ferst post ",
+    messege: "It's my first post ",
     likesCount: 7,
   },
 ]

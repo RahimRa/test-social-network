@@ -9,10 +9,9 @@ export interface State {
   users: PostsData[]
 }
 
-export interface NavbarLinks {
-  title: string
+export interface NavbarLink {
   link: string
-  img: string
+  Component: () => JSX.Element
 }
 
 export interface Names {

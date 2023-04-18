@@ -1,14 +1,24 @@
-import { Img, Wrapper, Avatar } from './Profile.styles'
+import { Img, Wrapper, Info_Wrap, Main, Child1, Child2 } from './Profile.styles'
 import { MyPosts } from '../../components/ProfilePageComponents/MyPosts/MyPosts'
 import { ProfileInfo } from '../../components/ProfilePageComponents/ProfileInfo/ProfileInfo'
+import NigthCiti from '../../img/ProfilePageImg/Nigth city.jpg'
+import { MyPhotos } from '../../components/ProfilePageComponents/MyPhotos/MyPhotos'
 
 export const ProfilePage: React.FC = () => {
   return (
     <Wrapper>
-      <Img src='http://surl.li/glfkj' height={300} />
-        {/* <ProfileInfo /> */}
-        <Avatar src='http://surl.li/fzhek' alt='Avatar' />
-      <MyPosts />
+      <Img src={NigthCiti} height={300} />
+      <Info_Wrap>
+        <ProfileInfo />
+      </Info_Wrap>
+      <Main>
+        <Child1>
+          <MyPhotos />
+        </Child1>
+        <Child2>
+          <MyPosts />
+        </Child2>
+      </Main>
     </Wrapper>
   )
 }

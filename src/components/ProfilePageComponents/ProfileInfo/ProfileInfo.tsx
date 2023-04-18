@@ -1,9 +1,10 @@
-import { Wrapper, Img, Discription } from './ProfileInfo.styles'
+import { Wrapper, Avatar, E_mail } from './ProfileInfo.styles'
 
 export const ProfileInfo = () => {
   return (
     <Wrapper>
-      <Img src='http://surl.li/fzhek' alt='Avatar' />
+      <Avatar src='http://surl.li/fzhek' alt='Avatar' />
+      <E_mail>@prostoTed</E_mail>
     </Wrapper>
   )
 }

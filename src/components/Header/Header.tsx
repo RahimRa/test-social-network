@@ -4,7 +4,7 @@ export const Header: React.FC = () => {
   return (
     <Wrapper>
       <Elem />
-      <Title>Loading..</Title>
+      <Title>Login...</Title>
     </Wrapper>
   )
 }
