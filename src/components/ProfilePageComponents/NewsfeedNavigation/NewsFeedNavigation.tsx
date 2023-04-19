@@ -1,29 +1,30 @@
+import { useState } from 'react'
 import { NewsFeedData } from '../../../interfaces/Interfaces'
-import { Wrapper, Title, Line, Elem } from './NewsfeedNavigation.styles'
+import { MyPosts } from './MyPosts/MyPosts'
+import { FriendsNews } from './FriendsNews/FriendsNews'
+import { GroupsNews } from './GroupsNews/GroupsNews'
+import { Wrapper, Line, Nav, Link } from './NewsFeedNavigation.styles'
 
 export const NewsFeedNavigation = () => {
-  const navNewsFeedArr: NewsFeedData[] = [
-    {
-      isActive: true,
-      title: 'My Posts',
-    },
-    {
-      isActive: false,
-      title: 'Freands',
-    },
-    {
-      isActive: false,
-      title: 'Groups',
-    },
-  ]
+  const [current, setCurrent] = useState<string>('1')
 
-  const handleNavNewsFeed = navNewsFeedArr.map((el) => {
-    return (
-      <Elem>
-        <Title>{el.title}</Title>
-        <Line />
-      </Elem>
-    )
-  })
-  return <Wrapper>{handleNavNewsFeed}</Wrapper>
+  const navNewsFeedArr: Record<string, JSX.Element> = {
+    '1': <MyPosts />,
+    '2': <FriendsNews />,
+    '3': <GroupsNews />,
+  }
+
+  return (
+    <Wrapper>
+      <Nav>
+        {Object.keys(navNewsFeedArr).map((key) => (
+          <Link isActive={current === key} onClick={() => setCurrent(key)}>
+            MyPosts
+            <Line />
+          </Link>
+        ))}
+      </Nav>
+      {navNewsFeedArr[current]}
+    </Wrapper>
+  )
 }

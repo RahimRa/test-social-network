@@ -9,9 +9,8 @@ export interface State {
 }
 
 export interface NewsFeedData {
-  id?:string
-  title: string
-  isActive: boolean
+  id?: string
+  Component: any
 }
 
 export interface NavbarLink {

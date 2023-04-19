@@ -12,7 +12,7 @@ function App() {
         <Navbar />
         <Main>
           <Routes>
-            <Route path='/profile' element={<ProfilePage />} />
+            <Route path='/profile/*' element={<ProfilePage />} />
             <Route path='/dialogs/*' element={<DialogPage />} />
           </Routes>
         </Main>
