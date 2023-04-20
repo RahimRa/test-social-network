@@ -1,10 +1,13 @@
 import styled from 'styled-components'
-import { NavLink } from 'react-router-dom'
+
+interface LineProps {
+  width: string
+}
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 10px;
 `
 export const Nav = styled.div`
   display: flex;
@@ -24,7 +27,7 @@ export const Link = styled.div<{ isActive: boolean }>`
   font-weight: 300;
   color: #292727;
   height: 60px;
-  width: 60px;
+  width: 100px;
   border-radius: 10px;
   margin: 15px;
   background-color: ${(props) => props.isActive && '#c225c58c'};
@@ -35,8 +38,9 @@ export const Link = styled.div<{ isActive: boolean }>`
   }
 `
 
-export const Line = styled.div`
-  height: 2px;
-  width: 50px;
-  background-color: #292727;
+export const Posts = styled.div`
+  display: flex;
+  padding: 30px;
+  height: 500px;
+  width: 100%;
 `

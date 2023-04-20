@@ -6,7 +6,11 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   width: 450px;
 `
-
+export const AvatarDiscription = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+`
 export const Avatar = styled.img`
   width: 150px;
   height: 150px;
@@ -14,6 +18,12 @@ export const Avatar = styled.img`
   object-fit: cover;
   border-radius: 10px;
   border: 2px solid #ffffff;
+`
+export const Name = styled.div`
+  font-size: 20px;
+  font-weight: 600;
+  padding: 2px;
+  color: #000000;
 `
 export const E_mail = styled.div`
   font-size: 30px;

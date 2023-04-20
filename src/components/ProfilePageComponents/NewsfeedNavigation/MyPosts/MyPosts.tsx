@@ -1,8 +1,7 @@
-import { Wrapper, AddPost, Textarea } from './MyPosts.styled'
+import { Wrapper } from './MyPosts.styled'
 import { Post } from './Post/Post'
 import { useSelector } from 'react-redux'
 import { State } from '../../../../interfaces/Interfaces'
-import { Save } from './Circle/Save'
 
 export const MyPosts: React.FC = () => {
   let users = useSelector((state: State) => state.users)
@@ -15,10 +14,6 @@ export const MyPosts: React.FC = () => {
 
   return (
     <Wrapper>
-      <AddPost>
-        <Textarea />
-        <Save />
-      </AddPost>
       {postsElements}
     </Wrapper>
   )

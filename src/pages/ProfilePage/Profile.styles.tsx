@@ -21,6 +21,7 @@ export const Img = styled.img`
 export const Main = styled.div`
   display: flex;
   justify-content: center;
+  margin-top: 60px;
 `
 export const Child1 = styled.div`
   flex-basis: 20%;

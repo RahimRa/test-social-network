@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { PostsData } from '../../interfaces/Interfaces'
+import { E_mail } from '../../components/ProfilePageComponents/ProfileInfo/ProfileInfo.styles'
 
 const initialState: PostsData[] = [
   {
@@ -16,7 +17,7 @@ const initialState: PostsData[] = [
 
 
 const recipesSlise = createSlice({
-  name: 'users',
+  name: 'posts',
   initialState,
   reducers: {
     setUsers(state, action) {

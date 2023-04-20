@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  background-color: #e94545;
-  
+
 `
 export const Avatar = styled.img`
   height: 50px;

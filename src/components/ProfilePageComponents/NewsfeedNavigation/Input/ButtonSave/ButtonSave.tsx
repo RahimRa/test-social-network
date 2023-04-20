@@ -1,10 +1,10 @@
 import { CheckIcon } from '../../../../../img/ProfilePageImg/CheckIcon'
-import {Circle} from './Save.styles'
+import { ButtonSave } from './ButtonSave.styles'
 
 export const Save = () => {
   return (
-    <Circle>
+    <ButtonSave onClick={() => console.log(1)}>
       <CheckIcon />
-    </Circle>
+    </ButtonSave>
   )
 }

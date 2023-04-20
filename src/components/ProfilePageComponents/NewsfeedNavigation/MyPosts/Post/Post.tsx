@@ -1,5 +1,6 @@
 import { Wrapper, Avatar, PostItem, Like } from './Post.styled'
 
+
 type PostProps = {
   id: number
   messege: string
