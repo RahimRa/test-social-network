@@ -5,6 +5,7 @@ import { MessagesIcon } from '../../img/MessagesIcon'
 import { MusicIcon } from '../../img/Music'
 import { SettingsIcon } from '../../img/SettingsIcon'
 import { LinkStyle, Wrapper } from './Navbar.styles'
+import { Tooltip } from '../Tooltip/Tooltip'
 
 export const Navbar: React.FC = () => {
   const linksData: NavbarLink[] = [
@@ -30,15 +31,21 @@ export const Navbar: React.FC = () => {
     },
   ]
 
-  
+
 
   let IconElements = linksData.map(({ link, Component }) => {
     return (
       <LinkStyle to={link}>
-        <Component />
+      
+        <Tooltip Component={Component} />
       </LinkStyle>
     )
   })
 
-  return <Wrapper>{IconElements}</Wrapper>
+  return (
+    <Wrapper>
+
+      {IconElements}
+    </Wrapper>
+  )
 }

@@ -9,7 +9,6 @@ export const Wrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
   height: 100%;
   width: 85px;
   margin-top: 80px;
