@@ -1,11 +1,12 @@
 import { Wrapper,Textarea} from "./Input.styles"
-import { Save } from "./ButtonSave/ButtonSave"
+import { Circle } from "./Circle/Circle"
+import { CheckIcon } from "../../../../img/ProfilePageImg/CheckIcon"
 
 export const Input = () => {
   return (
     <Wrapper>
       <Textarea />
-      <Save />
+      <Circle Component={CheckIcon} />
     </Wrapper>
   )
 }
