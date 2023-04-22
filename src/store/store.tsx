@@ -2,9 +2,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { useDispatch } from 'react-redux'
 import users from './slices/userSlice'
+import profile from './slices/profileSlice'
 
 const rootReducer = {
   users,
+  profile,
 }
 
 export const store = configureStore({

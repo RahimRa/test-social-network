@@ -23,7 +23,7 @@ export const NewsFeedNavigation = () => {
           </Link>
         ))}
       </Nav>
-      <Input />
+      {/* <Input /> */}
       <Posts>{navNewsFeed[current]}</Posts>
     </Wrapper>
   )

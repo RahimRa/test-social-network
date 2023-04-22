@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import { Popover } from 'react-tiny-popover'
-import { ProfileIcon } from '../../img/ProfileIcon'
 import { Wrapper, PoopoverData } from './Tooltip.styles'
 
 type TooltipProps = {
-  Component: ()=> JSX.Element
+  title: string
+  Component: () => JSX.Element
 }
 
-export const Tooltip: React.FC<TooltipProps> = ({ Component }) => {
+export const Tooltip: React.FC<TooltipProps> = ({ Component ,title }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false)
 
   return (
@@ -18,7 +18,7 @@ export const Tooltip: React.FC<TooltipProps> = ({ Component }) => {
         positions={['right']}
         content={() => (
           <PoopoverData>
-            <p>Profile</p>
+            <p>{title}</p>
           </PoopoverData>
         )}
       >

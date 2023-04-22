@@ -14,6 +14,7 @@ export interface NewsFeedData {
 }
 
 export interface NavbarLink {
+  title: string
   link: string
   Component: () => JSX.Element
 }
