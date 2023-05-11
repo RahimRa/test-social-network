@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   width: 450px;
 `
-export const AvatarDiscription = styled.div`
+export const AvatarDescription = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;

@@ -1,20 +1,24 @@
 import {
   Wrapper,
-  AvatarDiscription,
+  AvatarDescription,
   Avatar,
   Name,
   E_mail,
 } from './ProfileInfo.styles'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../../store/store'
 
-export const ProfileInfo = () => {
+export default () => {
+  let users = useSelector((state: RootState) => state.user)
+
   return (
     <Wrapper>
-      <AvatarDiscription>
+      <AvatarDescription>
         <Avatar src='http://surl.li/fzhek' alt='Avatar' />
-        <Name>Rakhim Dagaev</Name>
-      </AvatarDiscription>
+        <Name>{users.userName + ' ' + users.lastname}</Name>
+      </AvatarDescription>
 
-      <E_mail>@prostoTed</E_mail>
+      <E_mail>{users.email}</E_mail>
     </Wrapper>
   )
 }

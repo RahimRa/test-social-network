@@ -2,13 +2,15 @@ import { type } from 'os'
 import React from 'react'
 import { Wrapper, LinkStyle } from './Dialog.syles'
 
-type Names = {
+type Props = {
   id: number
   name: string
 }
-export const Dialog: React.FC<Names> = ({ name ,id}) => {
+
+
+export const Dialog = ({ name, id ,}: Props) => {
   return (
-    <Wrapper>
+    <Wrapper >
       <LinkStyle to={`/dialogs/${id}`}>{name}</LinkStyle>
     </Wrapper>
   )

@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: 2fr 10fr;
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
+  padding: 10px;
+  flex-basis: 30%;
 `

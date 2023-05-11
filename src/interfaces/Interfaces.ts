@@ -1,12 +1,19 @@
-export interface PostsData {
+export interface User {
+  email: string
+  userName: string
+  lastname: string
   id: number
-  messege: string
+  myPhoto: string[]
+}
+export interface PostInterface {
+  photo: string[]
+  description: string
+  userName: string
+  postName: string
+  lastname: string
   likesCount: number
 }
 
-export interface State {
-  users: PostsData[]
-}
 
 export interface NewsFeedData {
   id?: string
@@ -19,8 +26,8 @@ export interface NavbarLink {
   Component: () => JSX.Element
 }
 
-export interface Names {
+export interface DialogsInterface {
   id: number
   name: string
-  messege: string
+  message: string
 }

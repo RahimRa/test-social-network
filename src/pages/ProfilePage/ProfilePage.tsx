@@ -1,5 +1,5 @@
 import { Img, Wrapper, Info_Wrap, Main, Child1, Child2 } from './Profile.styles'
-import { ProfileInfo } from '../../components/ProfilePageComponents/ProfileInfo/ProfileInfo'
+import ProfileInfo from '../../components/ProfilePageComponents/ProfileInfo/ProfileInfo'
 import NigthCiti from '../../img/ProfilePageImg/Nigth city.jpg'
 import { MyPhotos } from '../../components/ProfilePageComponents/MyPhotos/MyPhotos'
 import { NewsFeedNavigation } from '../../components/ProfilePageComponents/NewsFeedNavigation/NewsFeedNavigation'

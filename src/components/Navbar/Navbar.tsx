@@ -4,6 +4,7 @@ import { ProfileIcon } from '../../img/ProfileIcon'
 import { MessagesIcon } from '../../img/MessagesIcon'
 import { MusicIcon } from '../../img/Music'
 import { SettingsIcon } from '../../img/SettingsIcon'
+import { Search } from '../../img/Search'
 import { LinkStyle, Wrapper } from './Navbar.styles'
 import { Tooltip } from '../Tooltip/Tooltip'
 
@@ -20,9 +21,14 @@ export const Navbar: React.FC = () => {
       Component: ProfileIcon,
     },
     {
-      title: 'Messeges',
+      title: 'Messages',
       link: '/dialogs',
       Component: MessagesIcon,
+    },
+    {
+      title: 'Search Users',
+      link: '/search',
+      Component: Search,
     },
     {
       title: 'Music',

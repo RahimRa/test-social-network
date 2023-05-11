@@ -4,7 +4,6 @@ import { ProfilePage } from './pages/ProfilePage/ProfilePage'
 import { App_Wrapper, Main } from './styles'
 import { Routes, Route } from 'react-router-dom'
 import { Header } from './components/Header/Header'
-import { Tooltip } from './components/Tooltip/Tooltip'
 
 function App() {
   return (
@@ -12,7 +11,6 @@ function App() {
       <Header />
       <Navbar />
       <Main>
-        
         <Routes>
             <Route path='/profile/*' element={<ProfilePage />} />
             <Route path='/dialogs/*' element={<DialogPage />} />

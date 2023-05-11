@@ -1,23 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { PostsData } from '../../interfaces/Interfaces'
-import { E_mail } from '../../components/ProfilePageComponents/ProfileInfo/ProfileInfo.styles'
+import { User } from '../../interfaces/Interfaces'
+import photo from '../../img/MyPhotosImg/images.jpg'
+import photo1 from '../../img/MyPhotosImg/images (1).jpg'
+import photo2 from '../../img/MyPhotosImg/images (2).jpg'
+import photo3 from '../../img/MyPhotosImg/images (3).jpg'
+import photo4 from '../../img/MyPhotosImg/images (4).jpg'
+import photo5 from '../../img/MyPhotosImg/images (5).jpg'
 
-const initialState: PostsData[] = [
-  {
-    id: 0,
-    messege: 'Hi , how are you?',
-    likesCount: 2,
-  },
-  {
-    id: 1,
-    messege: "It's my first post ",
-    likesCount: 7,
-  },
-]
+const initialState: User = {
+  userName: 'Rakhim',
+  lastname: 'Dagaev',
+  email: '@prostoTed',
+  id: 0,
+  myPhoto: [photo, photo1, photo2, photo3, photo4, photo5],
+}
 
-
-const recipesSlise = createSlice({
-  name: 'posts',
+const userSlise = createSlice({
+  name: 'user',
   initialState,
   reducers: {
     setUsers(state, action) {
@@ -26,5 +25,5 @@ const recipesSlise = createSlice({
   },
 })
 
-export const { setUsers } = recipesSlise.actions
-export default recipesSlise.reducer
+export const { setUsers } = userSlise.actions
+export default userSlise.reducer

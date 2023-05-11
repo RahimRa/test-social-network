@@ -1,15 +1,12 @@
 import { Wrapper, Title, Line, Myphoto_Wrapp, Photo } from './MyPhotos.styled'
-import photo from '../../../img/MyPhotosImg/images.jpg'
-import photo1 from '../../../img/MyPhotosImg/images (1).jpg'
-import photo2 from '../../../img/MyPhotosImg/images (2).jpg'
-import photo3 from '../../../img/MyPhotosImg/images (3).jpg'
-import photo4 from '../../../img/MyPhotosImg/images (4).jpg'
-import photo5 from '../../../img/MyPhotosImg/images (5).jpg'
+
+import { useSelector } from 'react-redux'
+import { RootState } from '../../../store/store'
 
 export const MyPhotos = () => {
-  const photoArr = [photo, photo1, photo2, photo3, photo4, photo5]
+  const photos = useSelector((state: RootState) => state.user.myPhoto)
 
-  const photoGallery = photoArr.map((photo) => {
+  const photoGallery = photos.map((photo) => {
     return <Photo src={photo} />
   })
 

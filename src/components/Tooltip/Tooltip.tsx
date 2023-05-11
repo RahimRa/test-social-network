@@ -7,7 +7,7 @@ type TooltipProps = {
   Component: () => JSX.Element
 }
 
-export const Tooltip: React.FC<TooltipProps> = ({ Component ,title }) => {
+export const Tooltip: React.FC<TooltipProps> = ({ Component, title }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false)
 
   return (
