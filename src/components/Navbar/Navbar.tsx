@@ -27,7 +27,7 @@ export const Navbar: React.FC = () => {
     },
     {
       title: 'Search Users',
-      link: '/search',
+      link: '/users',
       Component: Search,
     },
     {

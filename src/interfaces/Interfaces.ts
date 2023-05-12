@@ -14,7 +14,6 @@ export interface PostInterface {
   likesCount: number
 }
 
-
 export interface NewsFeedData {
   id?: string
   Component: any
@@ -30,4 +29,19 @@ export interface DialogsInterface {
   id: number
   name: string
   message: string
+}
+
+export interface SearchInterface {
+  id: number
+  followed: boolean
+  fullName: string
+  status: string
+  location: {
+    city: string
+    country: string
+  }
+}
+
+export interface SearchState {
+  users: SearchInterface[]
 }

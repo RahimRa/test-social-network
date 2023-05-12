@@ -19,7 +19,7 @@ export const MessagesIcon = () => {
 export const Svg = styled.svg`
   path {
     stroke: #ffffff;
-    stroke-width: 1px;
+    stroke-width: 0.5px;
   }
   cursor: pointer;
   &:hover {
