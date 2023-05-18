@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { colors } from '../colors/colors'
 
 export const SettingsIcon = () => {
   return (
@@ -8,7 +9,7 @@ export const SettingsIcon = () => {
       xmlns='http://www.w3.org/2000/svg'
       width='50'
       height='50'
-      fill='grey'
+      fill={colors.ligth_black}
       viewBox='0 0 512.000000 512.000000'
       preserveAspectRatio='xMidYMid meet'
     >
@@ -109,7 +110,7 @@ export const Svg = styled.svg`
   }
   cursor: pointer;
   &:hover {
-    fill: #c325c5;
+    fill: ${colors.orange};
     transition: 0.2s;
     transform: scale(1.2);
   }

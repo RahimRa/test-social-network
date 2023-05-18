@@ -36,6 +36,7 @@ export interface SearchInterface {
   followed: boolean
   fullName: string
   status: string
+  photoUrl: string
   location: {
     city: string
     country: string

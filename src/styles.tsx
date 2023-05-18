@@ -7,6 +7,5 @@ export const App_Wrapper = styled.div`
 
 export const Main = styled.div`
   margin-left: 85px;
-  margin-top: 85px;
   min-height: 100vh;
 `

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { colors } from '../colors/colors'
 
 type Props = {
   click: () => void
@@ -24,9 +25,8 @@ export const Svg = styled.svg`
   cursor: pointer;
 
   &:hover {
-    fill: #c325c5;
+    fill: ${colors.orange};
     transition: 0.2s;
     transform: scale(1.2);
-    
   }
 `

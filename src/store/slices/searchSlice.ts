@@ -8,6 +8,8 @@ const initialState: SearchState = {
       followed: true,
       fullName: 'Dmitry',
       status: 'I am boss',
+      photoUrl:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfNW-QQ_RtxkSo-2I-5twSGWVs7AEjyO-oGA&usqp=CAU',
       location: {
         city: 'Minsk',
         country: 'Belarus',
@@ -18,6 +20,8 @@ const initialState: SearchState = {
       followed: true,
       fullName: 'Sasha',
       status: 'I am boss',
+      photoUrl:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWkZZ_O_6Be0AWmIk7SRlKXIRVZjTeWDYL1A&usqp=CAU',
       location: {
         city: 'Moscow',
         country: 'Russia',
@@ -28,6 +32,8 @@ const initialState: SearchState = {
       followed: false,
       fullName: 'Andrey',
       status: 'I am boss',
+      photoUrl:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlIruH6q6l27JAxlkK3cZdDn1EFYOrkn9EFA&usqp=CAU',
       location: {
         city: 'Kiev',
         country: 'Ukraine',
@@ -64,7 +70,10 @@ const searchSlice = createSlice({
         }),
       }
     },
+    setUsers(state, action) {
+      return { ...state, users: [...state.users, ...action.payload] }
+    },
   },
 })
-export const { follow, unfollow } = searchSlice.actions
+export const { follow, unfollow, setUsers } = searchSlice.actions
 export default searchSlice.reducer

@@ -4,9 +4,6 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
   z-index: 1;
   width: 100%;
   height: 80px;
@@ -14,9 +11,9 @@ export const Wrapper = styled.div`
 `
 
 export const Elem = styled.div`
-  height: 80px;
+  height: 100%;
   width: 85px;
-  background-color: #474a58;
+  background-color: #171717da;
 `
 export const Title = styled.div`
   color: #474a58;
