@@ -10,21 +10,42 @@ import {
   Status,
 } from './Users.styles'
 import { useSelector, useDispatch } from 'react-redux'
-import { follow, unfollow, setUsers } from '../../../store/slices/searchSlice'
+import { follow, unfollow } from '../../../store/slices/searchSlice'
 import { RootState } from '../../../store/store'
+import { SearchInterface } from '../../../interfaces/Interfaces'
 
 export const Users = () => {
   const dispatch = useDispatch()
   const users = useSelector((state: RootState) => state.search)
 
+  const handleFollow = (userId: number) => {
+    dispatch(follow(userId))
+  }
+
+  const handleUnfollow = (userId: number) => {
+    dispatch(unfollow(userId))
+  }
+
   return (
     <Wrapper>
-      {users.users.map((user) => {
+      {users.users.map((user: SearchInterface) => {
         return (
           <User key={user.id}>
             <FirstChild>
               <Img src={user.photoUrl} alt='avatar' />
-              <Button>follow</Button>
+              {user.followed ? (
+                <Button onClick={() => handleUnfollow(user.id)}>
+                  Followed
+                </Button>
+              ) : (
+                <Button
+                  onClick={() => {
+                    handleFollow(user.id)
+                  }}
+                >
+                  Unfollowed
+                </Button>
+              )}
             </FirstChild>
             <Box>
               <Name>

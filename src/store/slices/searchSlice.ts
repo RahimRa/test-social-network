@@ -48,26 +48,16 @@ const searchSlice = createSlice({
   reducers: {
     follow(state, action) {
       const userId = action.payload
-      return {
-        ...state,
-        users: state.users.map((user) => {
-          if (user.id === userId) {
-            return { ...user, followed: true }
-          }
-          return user
-        }),
+      const user = state.users.find((user) => user.id === userId)
+      if (user) {
+        user.followed = true
       }
     },
     unfollow(state, action) {
       const userId = action.payload
-      return {
-        ...state,
-        users: state.users.map((user) => {
-          if (user.id === userId) {
-            return { ...user, followed: false }
-          }
-          return user
-        }),
+      const user = state.users.find((user) => user.id === userId)
+      if (user) {
+        user.followed = false
       }
     },
     setUsers(state, action) {

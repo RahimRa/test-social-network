@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { colors } from './colors/colors'
 
 export const App_Wrapper = styled.div`
   display: flex;
@@ -8,4 +9,5 @@ export const App_Wrapper = styled.div`
 export const Main = styled.div`
   margin-left: 85px;
   min-height: 100vh;
+  
 `
