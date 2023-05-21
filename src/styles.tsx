@@ -9,5 +9,8 @@ export const App_Wrapper = styled.div`
 export const Main = styled.div`
   margin-left: 85px;
   min-height: 100vh;
-  
+  background-color: ${colors.ligth_black};
+  overflow: scroll;
+  overflow-x: hidden;
+  color:${colors.white};
 `

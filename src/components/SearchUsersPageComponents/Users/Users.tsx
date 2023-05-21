@@ -10,13 +10,18 @@ import {
   Status,
 } from './Users.styles'
 import { useSelector, useDispatch } from 'react-redux'
-import { follow, unfollow } from '../../../store/slices/searchSlice'
+import { setUsers, follow, unfollow } from '../../../store/slices/searchSlice'
 import { RootState } from '../../../store/store'
 import { SearchInterface } from '../../../interfaces/Interfaces'
 
 export const Users = () => {
   const dispatch = useDispatch()
   const users = useSelector((state: RootState) => state.search)
+console.log(users);
+
+  if (users.users.length === 0) {
+    dispatch(setUsers([]))
+  }
 
   const handleFollow = (userId: number) => {
     dispatch(follow(userId))

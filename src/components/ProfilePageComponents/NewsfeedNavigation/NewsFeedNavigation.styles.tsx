@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { colors } from '../../../colors/colors'
 
 interface LineProps {
   width: string
@@ -8,33 +9,41 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 30px;
 `
 export const Nav = styled.div`
+  background-color: ${colors.white};
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100px;
+  border-radius: 10px;
   gap: 30px;
 `
-export const Link = styled.div<{ isActive: boolean }>`
+
+export const BottomBox = styled.div<{ isActive: boolean }>`
+  border-bottom: ${(props) =>
+    props.isActive && `2px solid ${colors.darck_orange}`};
+
+  &:hover {
+    transition: border-bottom 0.2s;
+    transform: scale(1.2);
+  }
+`
+
+export const Link = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  text-decoration: none;
   font-size: 15px;
-  font-weight: 300;
-  color: #292727;
-  height: 60px;
+  font-weight: 600;
+  color: ${colors.ligth_black};
+  height: 40px;
   width: 100px;
-  border-radius: 10px;
-  margin: 15px;
-  background-color: ${(props) => props.isActive && '#c225c58c'};
   &:hover {
-    background-color: #c225c58c;
-    transition: 0.2s;
-    transform: scale(1.2);
+    color: ${colors.orange};
   }
 `
 

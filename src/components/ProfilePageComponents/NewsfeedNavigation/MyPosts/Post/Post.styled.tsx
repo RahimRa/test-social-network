@@ -1,10 +1,13 @@
 import styled from 'styled-components'
+import { colors } from '../../../../../colors/colors'
 
 interface WrapperProps {
   post: boolean
 }
 
 export const Wrapper = styled.div<WrapperProps>`
+  padding: 10px;
+  border-radius: 10px;
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -12,6 +15,8 @@ export const Wrapper = styled.div<WrapperProps>`
   height: ${(props) => props.post === false && '500px'};
   transition: 0.2s;
   width: 600px;
+  background-color: ${colors.white};
+  color: ${colors.ligth_black};
 `
 export const Inner_Wrap = styled.div`
   display: flex;
@@ -50,7 +55,9 @@ export const PostImg = styled.img`
   }
   object-fit: cover;
 `
-export const PostItem = styled.span``
+export const PostItem = styled.span`
+  color: ${colors.black};
+`
 
 export const Like = styled.div``
 
@@ -60,7 +67,7 @@ export const Open = styled.button`
   background-color: #46444444;
   border: none;
   &:hover {
-    background-color: #c325c5;
+    background-color: ${colors.orange};
     transition: 0.1s;
   }
 `

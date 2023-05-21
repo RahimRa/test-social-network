@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { colors } from '../../../colors/colors'
 
 export const Wrapper = styled.div`
   position: relative;
@@ -7,6 +8,7 @@ export const Wrapper = styled.div`
   height: 100%;
   width: 100%;
   gap: 10px;
+  color: ${colors.ligth_black};
 `
 export const User = styled.div`
   padding: 10px;

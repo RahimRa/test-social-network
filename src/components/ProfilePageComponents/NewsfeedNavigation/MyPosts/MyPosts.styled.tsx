@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { colors } from '../../../../colors/colors'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -6,4 +7,5 @@ export const Wrapper = styled.div`
   padding: 20px;
   gap: 20px;
   width: 100%;
+  
 `

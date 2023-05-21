@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { colors } from '../../../colors/colors'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -23,7 +24,7 @@ export const Name = styled.div`
   font-size: 20px;
   font-weight: 600;
   padding: 2px;
-  color: #000000;
+  color: ${colors.white};
 `
 export const E_mail = styled.div`
   font-size: 30px;

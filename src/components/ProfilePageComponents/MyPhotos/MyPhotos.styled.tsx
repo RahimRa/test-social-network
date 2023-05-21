@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { colors } from '../../../colors/colors'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -8,6 +9,9 @@ export const Wrapper = styled.div`
   height: 100%;
   width: 200px;
   padding: 20px;
+  background-color: ${colors.white};
+  margin: 20px;
+  border-radius: 10px;
 `
 export const Title = styled.div`
   font-size: 25px;

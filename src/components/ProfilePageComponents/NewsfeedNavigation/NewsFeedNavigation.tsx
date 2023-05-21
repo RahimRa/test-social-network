@@ -2,7 +2,7 @@ import { useState } from 'react'
 import {MyPosts} from './MyPosts/MyPosts'
 import { FriendsNews } from './FriendsNews/FriendsNews'
 import { GroupsNews } from './GroupsNews/GroupsNews'
-import { Wrapper, Nav, Link, Posts } from './NewsFeedNavigation.styles'
+import { Wrapper, Nav, Link, Posts , BottomBox} from './NewsFeedNavigation.styles'
 import { AddPost } from './AddPost/AddPost'
 import { Close } from '../../../img/ProfilePageImg/Close'
 
@@ -22,9 +22,9 @@ export const NewsFeedNavigation = () => {
     <Wrapper>
       <Nav>
         {Object.keys(navNewsFeed).map((key) => (
-          <Link isActive={current === key} onClick={() => setCurrent(key)}>
-            {key}
-          </Link>
+          <BottomBox isActive={current === key}>
+            <Link onClick={() => setCurrent(key)}>{key}</Link>
+          </BottomBox>
         ))}
       </Nav>
       <Posts>{navNewsFeed[current]}</Posts>
