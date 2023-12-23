@@ -2,44 +2,10 @@ import { createSlice } from '@reduxjs/toolkit'
 import { SearchState } from '../../interfaces/Interfaces'
 
 const initialState: SearchState = {
-  users: [
-    {
-      id: 1,
-      followed: true,
-      fullName: 'Dmitry',
-      status: 'I am boss',
-      photoUrl:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfNW-QQ_RtxkSo-2I-5twSGWVs7AEjyO-oGA&usqp=CAU',
-      location: {
-        city: 'Minsk',
-        country: 'Belarus',
-      },
-    },
-    {
-      id: 2,
-      followed: true,
-      fullName: 'Sasha',
-      status: 'I am boss',
-      photoUrl:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWkZZ_O_6Be0AWmIk7SRlKXIRVZjTeWDYL1A&usqp=CAU',
-      location: {
-        city: 'Moscow',
-        country: 'Russia',
-      },
-    },
-    {
-      id: 3,
-      followed: false,
-      fullName: 'Andrey',
-      status: 'I am boss',
-      photoUrl:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlIruH6q6l27JAxlkK3cZdDn1EFYOrkn9EFA&usqp=CAU',
-      location: {
-        city: 'Kiev',
-        country: 'Ukraine',
-      },
-    },
-  ],
+  users: [],
+  pageSize: 5,
+  totalUsersCount: 20,
+  currentPage: 1
 }
 
 const searchSlice = createSlice({

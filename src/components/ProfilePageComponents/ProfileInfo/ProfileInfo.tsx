@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux'
 import { RootState } from '../../../store/store'
 
 export default () => {
-  let users = useSelector((state: RootState) => state.user)
+  let users = useSelector((state: RootState) => state.profile)
 
   return (
     <Wrapper>

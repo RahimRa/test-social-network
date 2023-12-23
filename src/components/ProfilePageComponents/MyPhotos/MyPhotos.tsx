@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import { RootState } from '../../../store/store'
 
 export const MyPhotos = () => {
-  const photos = useSelector((state: RootState) => state.user.myPhoto)
+  const photos = useSelector((state: RootState) => state.profile.profilePhotos)
 
   const photoGallery = photos.map((photo) => {
     return <Photo src={photo} />

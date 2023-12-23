@@ -14,7 +14,7 @@ import { SendMessageIcon } from '../../../img/SendMessageIcon'
 export const Messages = () => {
   const dispatch = useDispatch()
   const messages = useSelector((state: RootState) => state.dialogs)
-  const user = useSelector((state: RootState) => state.user)
+  const user = useSelector((state: RootState) => state.dialogs)
   const [message, setMessage] = useState<string>('')
 
 

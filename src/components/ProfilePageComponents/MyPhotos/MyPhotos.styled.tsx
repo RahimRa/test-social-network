@@ -6,22 +6,21 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  height: 100%;
   width: 200px;
   padding: 20px;
-  background-color: ${colors.white};
   margin: 20px;
+  background-color: ${colors.white};
   border-radius: 10px;
 `
 export const Title = styled.div`
   font-size: 25px;
   font-weight: 600;
-  color: #292727;
+  color: ${colors.ligth_black};
 `
 export const Line = styled.div`
   height: 2px;
   width: 50px;
-  background-color: #c325c5;
+  background-color: ${colors.ligth_black};
 `
 export const Myphoto_Wrapp = styled.div`
   display: flex;

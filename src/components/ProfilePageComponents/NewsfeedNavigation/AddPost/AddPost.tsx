@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { RootState } from '../../../../store/store'
-import { useDispatch , useSelector} from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { setPost } from '../../../../store/slices/profileSlice'
 import { AddPhoto } from './AddPhoto/AddPhoto'
 import { SendMessageIcon } from '../../../../img/SendMessageIcon'
@@ -18,11 +18,8 @@ type Props = {
 }
 
 export const AddPost = ({ icon }: Props) => {
-  let users = useSelector((state: RootState) => state.user)
-  let posts = useSelector((state: RootState) => state.posts)
-
-
-
+  let users = useSelector((state: RootState) => state.profile)
+  let posts = useSelector((state: RootState) => state.profile.myPosts)
 
   const dispatch = useDispatch()
   const [name, setName] = useState('')
@@ -53,16 +50,13 @@ export const AddPost = ({ icon }: Props) => {
             click={() => {
               dispatch(
                 setPost({
-                  userName: users.userName,
-                  lastname: users.lastname,
-                  photo: imageUrls,
+                  postImgs: imageUrls,
                   description: description,
                   postName: name,
                   likesCount: 0,
                 })
               )
             }}
-
           />
         </Child2>
       </Inner_Wrap>

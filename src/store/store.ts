@@ -1,14 +1,11 @@
-
 import { configureStore } from '@reduxjs/toolkit'
 import { useDispatch } from 'react-redux'
-import user from './slices/userSlice'
-import posts from './slices/profileSlice'
+import profile from './slices/profileSlice'
 import dialogs from './slices/dialogsSlice'
 import search from './slices/searchSlice'
 
 const rootReducer = {
-  user,
-  posts,
+  profile,
   dialogs,
   search,
 }

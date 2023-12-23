@@ -1,72 +1,72 @@
+import React, { Component } from 'react'
 import {
   Wrapper,
-  User,
-  FirstChild,
-  Img,
-  Button,
-  Box,
-  Name,
-  Location,
-  Status,
+
 } from './Users.styles'
-import { useSelector, useDispatch } from 'react-redux'
+import { connect } from 'react-redux'
 import { setUsers, follow, unfollow } from '../../../store/slices/searchSlice'
 import { RootState } from '../../../store/store'
-import { SearchInterface } from '../../../interfaces/Interfaces'
+import {  IUser } from '../../../interfaces/Interfaces'
+import axios from 'axios'
+import { PageSelection } from '../PageSelection/PageSelection'
+import { User } from '../User/User'
 
-export const Users = () => {
-  const dispatch = useDispatch()
-  const users = useSelector((state: RootState) => state.search)
-console.log(users);
-
-  if (users.users.length === 0) {
-    dispatch(setUsers([]))
-  }
-
-  const handleFollow = (userId: number) => {
-    dispatch(follow(userId))
-  }
-
-  const handleUnfollow = (userId: number) => {
-    dispatch(unfollow(userId))
-  }
-
-  return (
-    <Wrapper>
-      {users.users.map((user: SearchInterface) => {
-        return (
-          <User key={user.id}>
-            <FirstChild>
-              <Img src={user.photoUrl} alt='avatar' />
-              {user.followed ? (
-                <Button onClick={() => handleUnfollow(user.id)}>
-                  Followed
-                </Button>
-              ) : (
-                <Button
-                  onClick={() => {
-                    handleFollow(user.id)
-                  }}
-                >
-                  Unfollowed
-                </Button>
-              )}
-            </FirstChild>
-            <Box>
-              <Name>
-                <h2> {user.fullName}</h2>
-                <Location>
-                  <h2>{user.location.country}</h2>
-                  <h4>{user.location.city}</h4>
-                </Location>
-              </Name>
-              <Status>
-                <h4>{user.status}</h4>
-              </Status>
-            </Box>
-          </User>
-        )
-      })}
-    </Wrapper>
-  )
+interface Props {
+  users: IUser[]
+  dispatch: any
+  pageSize: number
+  totalUsersCount: number
+  currentPage: number
 }
+
+class Users extends Component<Props> {
+  componentDidMount() {
+    axios
+      .get('https://social-network.samuraijs.com/api/1.0/users')
+      .then((response) => {
+        this.props.dispatch(setUsers(response.data.items))
+      })
+  }
+
+  handleFollow = (userId: number) => {
+    this.props.dispatch(follow(userId))
+  }
+
+  handleUnfollow = (userId: number) => {
+    this.props.dispatch(unfollow(userId))
+  }
+
+  render() {
+    const { users } = this.props
+
+    let pagesCount = this.props.totalUsersCount / this.props.pageSize
+    let pages = []
+    for (let i = 1; i <= pagesCount; i++) {
+      pages.push(i)
+    }
+
+    return (
+      <Wrapper>
+        <PageSelection pages={pages} currentPage={this.props.currentPage} />
+
+        {users.map((user) => (
+          <User
+            key={user.id}
+            user={user}
+            handleFollow={this.handleFollow}
+            handleUnfollow={this.handleUnfollow}
+          />
+        ))}
+      </Wrapper>
+    )
+  }
+}
+
+const mapStateToProps = (state: RootState) => ({
+  users: state.search.users,
+  pageSize: state.search.pageSize,
+  totalUsersCount: state.search.totalUsersCount,
+  currentPage: state.search.currentPage,
+})
+
+export default connect(mapStateToProps)(Users)

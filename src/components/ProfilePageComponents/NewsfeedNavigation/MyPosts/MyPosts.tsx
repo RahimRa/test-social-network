@@ -2,22 +2,22 @@ import { Wrapper } from './MyPosts.styled'
 import { Post } from './Post/Post'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../../../store/store'
-import { PostInterface } from '../../../../interfaces/Interfaces'
+import { myPost } from '../../../../interfaces/Interfaces'
 
 export const MyPosts: React.FC = () => {
-  let posts = useSelector((state: RootState) => state.posts)
+  let posts = useSelector((state: RootState) => state.profile.myPosts)
+  let profile = useSelector((state: RootState) => state.profile)
 
 
-  let postsElements = posts.map((post: PostInterface) => {
-
+  let postsElements = posts.map((post: myPost) => {
     return (
       <Post
-        lastname={post.lastname}
+        lastname={profile.lastname}
+        userName={profile.userName}
         description={post.description}
         likesCount={post.likesCount}
-        userName={post.userName}
         postName={post.postName}
-        photo={post.photo}
+        postImgs={post.postImgs}
       />
     )
   })

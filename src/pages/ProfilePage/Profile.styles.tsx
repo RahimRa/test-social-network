@@ -4,14 +4,14 @@ export const Wrapper = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 `
 
 export const Info_Wrap = styled.div`
   position: absolute;
-  left: 100px;
-  top: 170px;
+  left: 40px;
+  top: 160px;
 `
 export const Img = styled.img`
   height: ${({ height }) => height};
@@ -19,9 +19,9 @@ export const Img = styled.img`
   object-fit: cover;
 `
 export const Main = styled.div`
+  padding: 0 20px;
   display: flex;
   justify-content: center;
-  margin-top: 60px;
 `
 export const Child1 = styled.div`
   flex-basis: 20%;

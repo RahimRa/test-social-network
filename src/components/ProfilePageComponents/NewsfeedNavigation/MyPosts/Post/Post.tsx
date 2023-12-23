@@ -19,7 +19,7 @@ type Props = {
   likesCount: number
   userName: string
   postName: string
-  photo: string[]
+  postImgs: string[]
   lastname: string
 }
 
@@ -28,15 +28,14 @@ export const Post = ({
   likesCount,
   lastname,
   userName,
-  photo,
+  postImgs,
   postName,
 }: Props) => {
   const [post, setPost] = useState<boolean>(false)
 
-  const Img = photo.map((img) => {
+  const Img = postImgs.map((img) => {
     return <PostImg src={img} />
   })
-
 
   return (
     <Wrapper post={post}>

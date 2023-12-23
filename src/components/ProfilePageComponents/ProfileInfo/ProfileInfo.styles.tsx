@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 450px;
+  
 `
 export const AvatarDescription = styled.div`
   display: flex;
@@ -13,8 +14,8 @@ export const AvatarDescription = styled.div`
   gap: 5px;
 `
 export const Avatar = styled.img`
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 10px;
   object-fit: cover;
   border-radius: 10px;

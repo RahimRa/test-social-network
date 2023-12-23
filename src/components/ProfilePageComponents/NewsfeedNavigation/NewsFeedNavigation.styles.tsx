@@ -1,10 +1,6 @@
 import styled from 'styled-components'
 import { colors } from '../../../colors/colors'
 
-interface LineProps {
-  width: string
-}
-
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -50,6 +46,5 @@ export const Link = styled.div`
 export const Posts = styled.div`
   display: flex;
   padding: 30px;
-  height: 500px;
   width: 100%;
 `

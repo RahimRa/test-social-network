@@ -1,10 +1,19 @@
-export interface User {
+export interface myPost {
+  postName: string
+  postImgs: string[]
+  description: string
+  likesCount: number
+}
+export interface IProfile {
+  profileImg: string
   email: string
   userName: string
   lastname: string
   id: number
-  myPhoto: string[]
+  profilePhotos: string[]
+  myPosts: myPost[]
 }
+
 export interface PostInterface {
   photo: string[]
   description: string
@@ -31,18 +40,21 @@ export interface DialogsInterface {
   message: string
 }
 
-export interface SearchInterface {
+export interface IUser {
   id: number
   followed: boolean
-  fullName: string
+  name: string
   status: string
-  photoUrl: string
-  location: {
-    city: string
-    country: string
+  uniqueUrlName: any
+  photos: {
+    small: any
+    large: any
   }
 }
 
 export interface SearchState {
-  users: SearchInterface[]
+  users: IUser[]
+  pageSize: number
+  totalUsersCount: number
+  currentPage: number
 }

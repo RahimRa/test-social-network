@@ -14,6 +14,7 @@ export const NewsFeedNavigation = () => {
     'Friends News': <FriendsNews />,
     'Groups News': <GroupsNews />,
     'Add post': (
+
       <AddPost icon={<Close click={() => setCurrent('My posts')} />} />
     ),
   }

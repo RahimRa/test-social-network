@@ -1,9 +1,15 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  background-color: #171717da;
-  padding: 20px;
+  padding: 60px;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
+  gap: 20px;
+  align-items: center;
+`
+export const Button = styled.button`
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
 `
